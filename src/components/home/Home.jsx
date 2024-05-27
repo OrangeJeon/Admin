@@ -1,12 +1,8 @@
 import React from "react";
 import './home.css';
 import FeaturedInfo from "./FeaturedInfo";
-import Chart from "./Chart";
-import Sidebar from './Sidebar';
-import Newmember from "./Newmember";
 import Request from "./Request";
 import Accept  from "./Accept";
-
 
 const data_new=[{"name":"Anna", "job":"Electronic Engineering", "email":"orangejwi0618@naver.com", "metamask":"0x15e6ebbcccccc"},
 { "name":"Tom", "job":"Soft Engineering", "email": "dlswl0618@inu.ac.kr", "metamask":"0x14e6ecbb6c60f1d4032"}
@@ -22,17 +18,6 @@ export default function Home() {
     return (
     <div className="home">
         <div className="homeWidgets"> 
-            <Newmember  
-                name1 ={data_new[0].name}
-                job1={data_new[0].job}
-                email1={data_new[0].email}
-                metamask1={data_new[0].metamask}
-                name2 ={data_new[1].name}
-                job2={data_new[1].job}
-                email2={data_new[1].email} 
-                metamask2={data_new[1].metamask}
-            />
-
             <Request
                 name1={data_req[0].name}
                 date1={data_req[0].date}
@@ -41,7 +26,6 @@ export default function Home() {
                 name2={data_req[1].name}
                 date2={data_req[1].date}
                 email2={data_req[1].email}
-            
             />
         </div>
         <div className="accept">

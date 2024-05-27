@@ -3,7 +3,7 @@ import './newmember.css';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import Modal from './Modal';
 
-export default function Newmember({ name1, job1, email1, metamask1, name2, job2, email2,metamask2}) {
+export default function Newmember({ name1, job1, email1, metamask1}) {
     const [modalOpen1, setModalOpen1] = useState(false);
     const [modalOpen2, setModalOpen2] = useState(false);
     const [modalOpen3, setModalOpen3] = useState(false);
@@ -63,27 +63,6 @@ export default function Newmember({ name1, job1, email1, metamask1, name2, job2,
                     </Modal>
                 </li>
             </ul>
-            <ul className="newlist">
-                <li className="newitem">
-                    <div className="newuser">
-                        <span className="newname">{name2}</span>
-                        <span className="newteam">{job2}</span>
-                       
-                    </div>
-                    <button className="newbutton" onClick={() => openModal('member2')}>
-                        <AssignmentIndIcon/>Info
-                    </button>
-                    <Modal open={modalOpen2} close={() => closeModal('member2')} header="Customer Information">
-                        <div>
-                            <p><span className="boldText">Name:</span> {name2}</p>
-                            <p><span className="boldText">Job:</span> {job2}</p>
-                            <p><span className="boldText">Email:</span> {email2}</p>
-                            <p><span className="boldText">Metamask:</span>{metamask1}</p>
-                        </div>
-                    </Modal>
-                </li>
-            </ul>
-            
         </div>
     )
 }
